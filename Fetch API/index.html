@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Fetch API</title>
 </head>
 <body>
-    <button id="getText">Get Text</button>
-    <button id="getUsers">Get JSON</button>
-    <button id="getPosts">Get Posts</button>
-    <hr>
+    <div class="m-10">
+    <div class="space-x-10 my-10">
+        <button id="getText" class="bg-blue-500 px-4 py-2 rounded-md text-white">Get Text</button>
+        <button id="getUsers" class="bg-yellow-400 px-4 py-2 rounded-md text-white">Get JSON</button>
+        <button id="getPosts" class="bg-green-600 px-4 py-2 rounded-md text-white">Get API Data</button>
+    </div>
     <div id="output"></div>
     <form action="">
         <div>
-            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="title" placeholder="Title" class="border-2 w-full px-3 py-2 mb-5">
         </div>
         <div>
-            <textarea name="body" id="body" cols="30" rows="4" placeholder="Body"></textarea>
+            <textarea name="body" id="body" cols="30" rows="4" placeholder="Body" class="border-2 w-full px-3 py-2 mb-5"></textarea>
         </div>
         <div>
-            <button type="submit" id="addPost">Submit</button>
+            <button type="submit" id="addPost" class="bg-red-600 px-4 py-2 rounded-md text-white" >Submit</button>
         </div>
     </form>
+    </div>
 
     <script>
         document.getElementById("getText").addEventListener("click", getText);
